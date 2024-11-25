@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: url("bg.jpg") no-repeat center center / cover;
+}
+
+.login-box {
+    position: relative;
+    width: 90%; /* Para telas pequenas */
+    max-width: 400px; /* Limite para telas maiores */
+    background: rgba(0, 0, 0, 0.7); /* Contraste com a imagem de fundo */
+    padding: 30px;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #fff;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    pointer-events: none;
+    transition: 0.3s ease-in-out;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+    top: -10px;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.input-box input {
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    color: #fff; /* Texto branco */
+    padding: 0 10px;
+}
+
+.input-box input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.input-box .icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.remember-forgot a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+button {
+    width: 100%;
+    height: 45px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: #ddd;
+}
+
+.register-link {
+    font-size: 0.9rem;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.register-link a {
+    color: #00f;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 576px) {
+    .login-box {
+        width: 95%; 
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    button {
+        height: 40px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .login-box {
+        width: 90%;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .login-box {
+        max-width: 450px;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+}
